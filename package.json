@@ -2,7 +2,7 @@
   "name": "v13",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Structures/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,15 @@
     "url": "git+https://github.com/Gussi22/Test.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gussi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gussi22/Test/issues"
   },
-  "homepage": "https://github.com/Gussi22/Test#readme"
+  "homepage": "https://github.com/Gussi22/Test#readme",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^13.11.0",
+    "glob": "^8.0.3"
+  }
 }
