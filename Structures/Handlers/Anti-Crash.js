@@ -1,8 +1,7 @@
 const { MessageEmbed, WebhookClient, Client } = require("discord.js");
+const { AntiCrash } = require("../config.json");
 const { inspect } = require("util");
-const s = new WebhookClient({
-  url: "https://discord.com/api/webhooks/1027481078967054336/ZYewOg4WnkB6LGUx9kSuYz3BfYy8Iw95VivFIqhlae6XK7XYoMHOgAkc6KhlCPwP_I_j",
-});
+const s = new WebhookClient({ url: AntiCrash });
 
 /**
  *

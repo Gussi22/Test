@@ -42,7 +42,17 @@ module.exports = {
         });
       }
 
-      command.execute(interaction, client);
+      if (interaction.options.getSubcommand(false)) {
+        const subCommandFile = client.subCommands.get(
+          `${interaction.commandName}.${interaction.options.getSubcommand()}`
+        );
+        if (!subCommandFile)
+          return interaction.reply({
+            content: "This sub command is outdated!",
+            ephemeral: true,
+          });
+        subCommandFile.execute(interaction, client);
+      } else command.execute(interaction, client);
     }
   },
 };

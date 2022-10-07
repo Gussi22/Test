@@ -1,15 +1,17 @@
 const { Client } = require("discord.js");
+const { loadCommands } = require("../../Structures/Handlers/Command");
 
 module.exports = {
   name: "ready",
-  loadName: "Ready",
   once: true,
   /**
    *
    * @param {Client} client
    */
-  execute(client) {
+  async execute(client) {
     console.log(`Client signed in as: ${client.user.username}`);
+
+    loadCommands(client);
 
     client.user.setStatus("idle");
 
