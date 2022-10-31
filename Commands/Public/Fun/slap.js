@@ -1,5 +1,4 @@
 const { CommandInteraction, MessageEmbed } = require("discord.js");
-const { slap } = require("../../../JSON/fun.json");
 
 module.exports = {
   name: "slap",
