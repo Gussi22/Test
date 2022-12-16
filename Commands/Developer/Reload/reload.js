@@ -13,5 +13,10 @@ module.exports = {
       description: "Reload your commands",
       type: "SUB_COMMAND",
     },
+		{
+			name: "buttons",
+			description: "Reload your buttons",
+			type: "SUB_COMMAND"
+		}
   ],
 };

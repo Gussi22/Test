@@ -1,5 +1,7 @@
 const { Client } = require("discord.js");
 const { loadCommands } = require("../../Structures/Handlers/Command");
+const mongoose = require("mongoose");
+const { Database } = require("../../Structures/config.json");
 
 module.exports = {
   name: "ready",
@@ -32,5 +34,18 @@ module.exports = {
         ],
       });
     }, 1000 * 60);
+
+		if (!Database) return;
+
+		mongoose.connect(Database, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		})
+		.then(() => {
+			console.log("Connected to database");
+		})
+		.catch((err) => {
+			console.log(err);
+		})
   },
 };
