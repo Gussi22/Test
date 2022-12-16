@@ -66,15 +66,18 @@ module.exports = {
 					.addFields(
 						{
 							name: "Upcoming",
-							value: Upcoming.url
+							value: Upcoming.shortUrl,
+							inline: true
 						},
 						{
 							name: "Watching",
-							value: Watching.url
+							value: Watching.shortUrl,
+							inline: true
 						},
 						{
 							name: "Watched",
-							value: Watched.url
+							value: Watched.shortUrl,
+							inline: true
 						}
 					)
 			]
