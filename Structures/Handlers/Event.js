@@ -19,10 +19,14 @@ async function loadEvents(client) {
         `🔴 Invalid/Missing name: ${L[5] + `/` + L[6]}`
       );
     }
+
+		const execute = (...args) => event.execute(...args, client);
+		client.events.set(event.name, execute);
+
     if (event.once) {
-      client.once(event.name, (...args) => event.execute(...args, client));
+      client.once(event.name, execute);
     } else {
-      client.on(event.name, (...args) => event.execute(...args, client));
+      client.on(event.name, execute);
     }
 
     table.addRow(event.loadName ? event.loadName : event.name, "🟩");
