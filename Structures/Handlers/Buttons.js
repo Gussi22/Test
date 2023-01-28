@@ -11,7 +11,7 @@ async function loadButtons(client) {
 		const button = require(file);
 
 		if (!button.id)
-			return table.addRow(file.split("/")[6], "🟥 Failed", "Missing id");
+			return table.addRow(file.split("/")[6], "🟥 Failed", "Missing ID");
 
 		client.buttons.set(button.id, button);
 		table.addRow(button.id, "🟩 Loaded");
