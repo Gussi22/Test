@@ -17,6 +17,11 @@ module.exports = {
 			name: "buttons",
 			description: "Reload your buttons",
 			type: "SUB_COMMAND"
+		},
+		{
+			name: "modals",
+			description: "Reload your modals",
+			type: "SUB_COMMAND"
 		}
   ],
 };
