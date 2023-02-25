@@ -6,14 +6,17 @@ const { Token } = require("./config.json");
 
 const { loadEvents } = require("../Structures/Handlers/Event");
 const { loadButtons } = require("../Structures/Handlers/Buttons");
+const { loadMenus } = require("../Structures/Handlers/Menus");
 
 client.events = new Collection();
 client.commands = new Collection();
 client.subCommands = new Collection();
 client.buttons = new Collection();
+client.menus = new Collection();
 
 loadEvents(client);
 loadButtons(client);
+loadMenus(client)
 
 require("./Handlers/Anti-Crash")(client);
 
