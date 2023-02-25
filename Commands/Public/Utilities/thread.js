@@ -43,6 +43,11 @@ module.exports = {
 				.setStyle("DANGER")
 		);
 
+		await interaction.reply({
+			content: "Thread started",
+			ephemeral: true
+		});
+
 		const message = await interaction.channel.send({
 			content: `**${text}**`,
 			files: [{ attachment: att }],
@@ -58,12 +63,8 @@ module.exports = {
 			GuildID: guild.id,
 			MemberID: member.id,
 			MessageID: message.id,
-			ThreadID: thread.id
+			ThreadID: thread.id,
+			Title: text
 		});
-
-		interaction.reply({
-			content: "Thread started",
-			ephemeral: true
-		})
 	}
 }

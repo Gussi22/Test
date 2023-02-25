@@ -6,6 +6,7 @@ module.exports = model(
 		GuildID: String,
 		MemberID: String,
 		MessageID: String,
-		ThreadID: String
+		ThreadID: String,
+		Title: String
 	})
 )
